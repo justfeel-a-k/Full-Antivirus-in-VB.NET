@@ -40,9 +40,6 @@ Partial Class ctlDashboard
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -52,8 +49,6 @@ Partial Class ctlDashboard
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel6.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -122,7 +117,7 @@ Partial Class ctlDashboard
         '
         'MyButton1
         '
-        Me.MyButton1.BottomColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MyButton1.BottomColor = System.Drawing.Color.Blue
         Me.MyButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MyButton1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.MyButton1.Location = New System.Drawing.Point(55, 42)
@@ -169,7 +164,7 @@ Partial Class ctlDashboard
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.Controls.Add(Me.PictureBox3)
         Me.Panel5.Controls.Add(Me.Label6)
-        Me.Panel5.Location = New System.Drawing.Point(266, 340)
+        Me.Panel5.Location = New System.Drawing.Point(354, 340)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(168, 177)
         Me.Panel5.TabIndex = 9
@@ -242,41 +237,11 @@ Partial Class ctlDashboard
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Arial Narrow", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label8.Location = New System.Drawing.Point(52, 125)
+        Me.Label8.Location = New System.Drawing.Point(52, 119)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(62, 33)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "VPN"
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.White
-        Me.Panel6.Controls.Add(Me.PictureBox4)
-        Me.Panel6.Controls.Add(Me.Label7)
-        Me.Panel6.Location = New System.Drawing.Point(462, 340)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(163, 177)
-        Me.Panel6.TabIndex = 12
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Antivirusdemo.My.Resources.Resources.Vanlabityscan
-        Me.PictureBox4.Location = New System.Drawing.Point(34, 38)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 16
-        Me.PictureBox4.TabStop = False
-        '
-        'Label7
-        '
-        Me.Label7.Font = New System.Drawing.Font("Arial Narrow", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(3, 107)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(169, 70)
-        Me.Label7.TabIndex = 14
-        Me.Label7.Text = "Vulnerability        Scan"
         '
         'ctlDashboard
         '
@@ -284,7 +249,6 @@ Partial Class ctlDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel5)
@@ -307,8 +271,6 @@ Partial Class ctlDashboard
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel6.ResumeLayout(False)
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -325,13 +287,10 @@ Partial Class ctlDashboard
     Friend WithEvents Label4 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel6 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
 End Class

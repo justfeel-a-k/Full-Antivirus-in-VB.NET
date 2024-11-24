@@ -3,7 +3,10 @@
 Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        If My.Settings.ActivationStatus = False Then
+            CtlSubscription1.BringToFront()
+            CtlSubscription1.Visible = True
+        End If
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
@@ -84,16 +87,9 @@ Public Class Form1
         End With
         imgAccount.BackColor = MyColors.imageDeactiveColor
 
-        With btnPref
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
         imgPref.BackColor = MyColors.imageDeactiveColor
 
-        With btnHelp
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
+
         imgHelp.BackColor = MyColors.imageDeactiveColor
 
     End Sub
@@ -132,113 +128,29 @@ Public Class Form1
         End With
         imgAccount.BackColor = MyColors.imageDeactiveColor
 
-        With btnPref
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
+
         imgPref.BackColor = MyColors.imageDeactiveColor
 
-        With btnHelp
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
+
         imgHelp.BackColor = MyColors.imageDeactiveColor
     End Sub
 
     Private Sub btnprivacy_Click(sender As Object, e As EventArgs) Handles btnprivacy.Click
+        MyFunctions.privacyClick()
+
         CtlPrivacy1.BringToFront()
         CtlPrivacy1.Visible = True
-        With btnDashboard
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgDashboard.BackColor = MyColors.imageDeactiveColor
-
-        With btnProtection
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgProtection.BackColor = MyColors.imageDeactiveColor
-
-        With btnprivacy
-            .BottomColor = MyColors.active_color1
-            .TopColor = MyColors.active_color2
-        End With
-        imgPrivacy.BackColor = MyColors.imageActiveColor
-
-        With btnNotification
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgNotification.BackColor = MyColors.imageDeactiveColor
-
-        With btnAccount
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgAccount.BackColor = MyColors.imageDeactiveColor
-
-        With btnPref
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgPref.BackColor = MyColors.imageDeactiveColor
-
-        With btnHelp
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgHelp.BackColor = MyColors.imageDeactiveColor
     End Sub
 
     Private Sub btnNotification_Click(sender As Object, e As EventArgs) Handles btnNotification.Click
+        MyFunctions.systemPerformance()
         CtlSystemPerformance1.BringToFront()
         CtlSystemPerformance1.Visible = True
-
-        With btnDashboard
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgDashboard.BackColor = MyColors.imageDeactiveColor
-
-        With btnProtection
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgProtection.BackColor = MyColors.imageDeactiveColor
-
-        With btnprivacy
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgPrivacy.BackColor = MyColors.imageDeactiveColor
-
-        With btnNotification
-            .BottomColor = MyColors.active_color1
-            .TopColor = MyColors.active_color2
-        End With
-        imgNotification.BackColor = MyColors.imageActiveColor
-
-        With btnAccount
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgAccount.BackColor = MyColors.imageDeactiveColor
-
-        With btnPref
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgPref.BackColor = MyColors.imageDeactiveColor
-
-        With btnHelp
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
-        imgHelp.BackColor = MyColors.imageDeactiveColor
     End Sub
 
     Private Sub btnAccount_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
+        ctlAccount1.Bringtofront()
+        ctlAccount1.visible = True
         With btnDashboard
             .BottomColor = MyColors.deactive_color1
             .TopColor = MyColors.deactive_color2
@@ -269,20 +181,14 @@ Public Class Form1
         End With
         imgAccount.BackColor = MyColors.imageActiveColor
 
-        With btnPref
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
+
         imgPref.BackColor = MyColors.imageDeactiveColor
 
-        With btnHelp
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
+
         imgHelp.BackColor = MyColors.imageDeactiveColor
     End Sub
 
-    Private Sub btnPref_Click(sender As Object, e As EventArgs) Handles btnPref.Click
+    Private Sub btnPref_Click(sender As Object, e As EventArgs)
         With btnDashboard
             .BottomColor = MyColors.deactive_color1
             .TopColor = MyColors.deactive_color2
@@ -313,20 +219,14 @@ Public Class Form1
         End With
         imgAccount.BackColor = MyColors.imageDeactiveColor
 
-        With btnPref
-            .BottomColor = MyColors.active_color1
-            .TopColor = MyColors.active_color2
-        End With
+
         imgPref.BackColor = MyColors.imageActiveColor
 
-        With btnHelp
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
+
         imgHelp.BackColor = MyColors.imageDeactiveColor
     End Sub
 
-    Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
+    Private Sub btnHelp_Click(sender As Object, e As EventArgs)
         With btnDashboard
             .BottomColor = MyColors.deactive_color1
             .TopColor = MyColors.deactive_color2
@@ -357,16 +257,23 @@ Public Class Form1
         End With
         imgAccount.BackColor = MyColors.imageDeactiveColor
 
-        With btnPref
-            .BottomColor = MyColors.deactive_color1
-            .TopColor = MyColors.deactive_color2
-        End With
+
         imgPref.BackColor = MyColors.imageDeactiveColor
 
-        With btnHelp
-            .BottomColor = MyColors.active_color1
-            .TopColor = MyColors.active_color2
-        End With
+        
         imgHelp.BackColor = MyColors.imageActiveColor
+    End Sub
+
+    Private Sub imgHelp_Click(sender As Object, e As EventArgs) Handles imgHelp.Click
+        Process.Start("https://www.google.com")
+    End Sub
+
+    Private Sub imgPref_Click(sender As Object, e As EventArgs) Handles imgPref.Click
+        frmSettings.ShowDialog()
+    End Sub
+
+    Private Sub MyButton2_Click(sender As Object, e As EventArgs) Handles MyButton2.Click
+        CtlSubscription1.BringToFront()
+        CtlSubscription1.Visible = True
     End Sub
 End Class
